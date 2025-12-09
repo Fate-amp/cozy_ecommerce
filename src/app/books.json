@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Man's Search for Meaning",
+    "author": "Viktor E. Frankl",
+    "price": "14.99",
+    "category": "Philosophy",
+    "cover": "/images/mans_search_for_meaning.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The Myth of Sisyphus",
+    "author": "Albert Camus",
+    "price": "12.99",
+    "category": "Philosophy",
+    "cover": "/images/the_myth_of_sisphus.webp"
+  },
+  {
+    "id": 3,
+    "title": "Being and Nothingness",
+    "author": "Jean-Paul Sartre",
+    "price": "19.50",
+    "category": "Philosophy",
+    "cover": "/images/being_and_nothingness.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Beyond Good and Evil",
+    "author": "Friedrich Nietzsche",
+    "price": "11.50",
+    "category": "Philosophy",
+    "cover": "/images/Beyond Good and Evil.webp"
+  },
+  {
+    "id": 5,
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "price": "10.50",
+    "category": "Philosophy",
+    "cover": "/images/Meditations.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "price": "15.99",
+    "category": "Psychology",
+    "cover": "/images/Thinking, Fast and Slow.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": "17.99",
+    "category": "Psychology",
+    "cover": "/images/atomic habits.jpeg"
+  },
+  {
+    "id": 8,
+    "title": "The Body Keeps the Score",
+    "author": "Bessel van der Kolk",
+    "price": "18.50",
+    "category": "Psychology",
+    "cover": "/images/The Body Keeps the Score.jpeg"
+  },
+  {
+    "id": 9,
+    "title": "Man and His Symbols",
+    "author": "Carl Jung",
+    "price": "14.50",
+    "category": "Psychology",
+    "cover": "/images/Man and His Symbols.jpeg"
+  },
+  {
+    "id": 10,
+    "title": "Flow",
+    "author": "Mihaly Csikszentmihalyi",
+    "price": "13.99",
+    "category": "Psychology",
+    "cover": "/images/Flow.jpg"
+  },
+  {
+    "id": 11,
+    "title": "The Girl on the Train",
+    "author": "Paula Hawkins",
+    "price": "12.99",
+    "category": "Thriller",
+    "cover": "/images/The Girl on the Train.jpeg"
+  },
+  {
+    "id": 12,
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "price": "14.99",
+    "category": "Thriller",
+    "cover": "/images/Gone Girl.jpeg"
+  },
+  {
+    "id": 13,
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "price": "16.99",
+    "category": "Thriller",
+    "cover": "/images/The Da Vinci Code.jpeg"
+  },
+  {
+    "id": 14,
+    "title": "Shutter Island",
+    "author": "Dennis Lehane",
+    "price": "13.50",
+    "category": "Thriller",
+    "cover": "/images/Shutter Island.jpeg"
+  },
+  {
+    "id": 15,
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "price": "15.99",
+    "category": "Thriller",
+    "cover": "/images/The Silent Patient.jpg"
+  },
+  {
+    "id": 16,
+    "title": "The Sun and Her Flowers",
+    "author": "Rupi Kaur",
+    "price": "11.99",
+    "category": "Poetry",
+    "cover": "/images/The Sun and Her Flowers.jpeg"
+  },
+  {
+    "id": 17,
+    "title": "Milk and Honey",
+    "author": "Rupi Kaur",
+    "price": "10.99",
+    "category": "Poetry",
+    "cover": "/images/Milk and Honey.png"
+  },
+  {
+    "id": 18,
+    "title": "The Essential Rumi",
+    "author": "Rumi",
+    "price": "14.00",
+    "category": "Poetry",
+    "cover": "/images/The Essential Rumi.jpeg"
+  },
+  {
+    "id": 19,
+    "title": "Leaves of Grass",
+    "author": "Walt Whitman",
+    "price": "12.50",
+    "category": "Poetry",
+    "cover": "/images/Leaves of Grass.jpeg"
+  },
+  {
+    "id": 20,
+    "title": "The Prophet",
+    "author": "Kahlil Gibran",
+    "price": "9.99",
+    "category": "Poetry",
+    "cover": "/images/The Prophet.jpeg"
+  }
+]
