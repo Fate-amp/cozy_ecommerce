@@ -9,13 +9,13 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import { useState } from "react";
-import books from "../books.json"
+import books from "../books.json";
 
 export default function Cart() {
   const [open, setOpen] = useState(false);
 
-  const { cart, addBook, reduceBook, removeBook,total } = useCart();
-
+  const { cart, addBook, reduceBook, removeBook, calculate_total, total } =
+    useCart();
 
   // The following removes a book if the count is 1 and reduces from the count if it's more
   const handleReduction = (id: number, count: number) => {
@@ -30,14 +30,19 @@ export default function Cart() {
       <ShoppingBagIcon onClick={() => setOpen(true)} size={24} />
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         {/* The Start Drawer content when it's open */}
-        <div className="h-screen w-[400px]">
+        <div className="h-screen w-screen lg:w-[400px]">
           {/* Title */}
-          <div className="w-full px-4 pb-3 pt-9 flex border-b border-b-amber-200">
-            <p className="text-lg text-amber-800 font-semibold">Your Cart:</p>
-            {/* The number of items goes here */}
-            <p className="text-lg text-amber-800 font-semibold">
-              {cart.length}
-            </p>
+          <div className="w-full px-4 pb-3 pt-9 border-b border-b-amber-200 flex justify-between">
+            <div className="flex">
+              <p className="text-lg text-amber-800 font-semibold">Your Cart:</p>
+              {/* The number of items goes here */}
+              <p className="text-lg text-amber-800 font-semibold">
+                {cart.length}
+              </p>
+            </div>
+            <div onClick={() => setOpen(false)}>
+              <XIcon size={20} />
+            </div>
           </div>
           {/* The cart's items */}
           <div className="p-4 h-[400px] overflow-scroll">
@@ -68,7 +73,10 @@ export default function Cart() {
                         </p>
                       </div>
                       <button
-                        onClick={() => removeBook(id)}
+                        onClick={() => {
+                          removeBook(id);
+                          calculate_total();
+                        }}
                         className="text-amber-800 cursor-pointer"
                       >
                         <XIcon size={15} />
@@ -78,7 +86,10 @@ export default function Cart() {
                       {/* item counter */}
                       <div className="w-20 h-7 bg-white rounded-xs flex justify-between items-center text-[14px]">
                         <button
-                          onClick={() => handleReduction(id, item.count)}
+                          onClick={() => {
+                            handleReduction(id, item.count);
+                            calculate_total();
+                          }}
                           className="cursor-pointer p-1 text-lg text-amber-900"
                         >
                           <MinusIcon size={10} />
@@ -87,7 +98,10 @@ export default function Cart() {
                           {item.count}
                         </p>
                         <button
-                          onClick={() => addBook(id)}
+                          onClick={() => {
+                            addBook(id);
+                            calculate_total();
+                          }}
                           className="cursor-pointer p-1 text-lg text-amber-900"
                         >
                           <PlusIcon size={10} />
@@ -108,9 +122,7 @@ export default function Cart() {
             <div className="h-1/2 text-amber-700 text-[14px] font-extrathin">
               <div className="h-1/2 p-2 flex justify-between">
                 <p>Subtotal:</p>
-                <p>
-                  €{total}
-                </p>
+                <p>€{total}</p>
               </div>
               <div className="h-1/2 p-2 flex justify-between">
                 <p>Shipping:</p>
@@ -120,9 +132,7 @@ export default function Cart() {
             <div className="h-1/2 flex flex-col justify-between border-t border-t-amber-200">
               <div className="h-1/2 flex justify-between py-3">
                 <p className="text-amber-800 font-bold">Total:</p>
-                <p className="text-amber-600 font-bold">
-                  €{total}
-                </p>
+                <p className="text-amber-600 font-bold">€{total + 3.99}</p>
               </div>
               <div className="h-[45%]">
                 <button className="w-full h-full bg-amber-600 text-white rounded-md text-[13px] font-semibold">

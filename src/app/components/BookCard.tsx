@@ -13,16 +13,17 @@ export interface IBookCard {
 }
 
 function BookCard({ id, title, author, price, imgSrc, location }: IBookCard) {
-  const { addBook } = useCart();
+  const { addBook, calculate_total } = useCart();
   // The following function adds a book to the cart on click
   const handleAddBook = () => {
     addBook(id);
+    calculate_total();
   };
   if (location === "staff_picks") {
     return (
       <div
         key={id}
-        className="h-[640px] sm:h-[530px] lg:h-[470px] xl:h-[500px] w-full sm:w-[275px] md:w-[310px] lg:w-[230px] xl:w-[300px] border-2 border-amber-100 hover:border-amber-300 hover:-translate-y-1.5 cursor-pointer transition-all duration-300 bg-white shadow-2xl rounded-3xl p-4 mb-8 flex flex-col justify-between group mr-6"
+        className="h-[440px] sm:h-[530px] lg:h-[470px] xl:h-[500px] w-full sm:w-[275px] md:w-[310px] lg:w-[230px] xl:w-[300px] border-2 border-amber-100 hover:border-amber-300 hover:-translate-y-1.5 cursor-pointer transition-all duration-300 bg-white shadow-2xl rounded-3xl p-4 mb-8 flex flex-col justify-between group mr-6"
       >
         {/* The book's image */}
         <div className="h-[70%] lg:h-[55%] xl:h-[70%] w-full relative rounded-3xl overflow-hidden">
@@ -54,7 +55,7 @@ function BookCard({ id, title, author, price, imgSrc, location }: IBookCard) {
     return (
       <div
         key={id}
-        className="h-[640px] sm:h-[530px] lg:h-[470px] xl:h-[450px] w-full sm:w-[275px] md:w-[290px] lg:w-[275px] xl:w-[260px] 2xl:w-[320px] border-2 border-amber-100 hover:border-amber-300 hover:-translate-y-1.5 cursor-pointer transition-all duration-300 bg-white shadow-2xl rounded-3xl p-4 mb-8 flex flex-col justify-between group mr-6"
+        className="h-[540px] sm:h-[530px] lg:h-[470px] xl:h-[450px] w-[340px] sm:w-[250px] md:w-[40%] lg:w-[275px] xl:w-[260px] 2xl:w-[320px] border-2 border-amber-100 hover:border-amber-300 hover:-translate-y-1.5 cursor-pointer transition-all duration-300 bg-white shadow-2xl rounded-3xl p-4 mb-8 flex flex-col justify-between group mr-6"
       >
         {/* The book's image */}
         <div className="h-[70%] lg:h-[55%] xl:h-[70%] w-full relative rounded-3xl overflow-hidden">

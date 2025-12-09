@@ -95,9 +95,9 @@ export default function Page() {
     }
   };
   return (
-    <div className="w-full bg-[#fef8f0] p-8 border-t-2 border-t-amber-100">
+    <div className="w-full bg-[#fef8f0] p-3 sm:p-8 border-t-2 border-t-amber-100">
       {/* button to open filters on screens of 1024px or less */}
-      <button onClick={()=>setDrawer(true)} className="fixed bottom-0 lg:hidden w-full h-10 bg-amber-600 text-white font-bold z-10">
+      <button onClick={()=>setDrawer(true)} className="fixed bottom-0 right-0 left-0 lg:hidden w-screen h-10 bg-amber-600 text-white font-bold z-10">
         Open Filters
       </button>
       {/* Drawer on smaller screens */}
@@ -246,7 +246,7 @@ export default function Page() {
             </FormControl>
           </div>
           {/* Books List */}
-          <div className="w-full flex flex-wrap">
+          <div className="w-full flex flex-wrap justify-center md:justify-start">
             {currentBooks.map((item) => {
               return (
                 <BookCard
