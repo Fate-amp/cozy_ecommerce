@@ -30,7 +30,7 @@ export default function HeroSection() {
           {/* The main description */}
           <div className="mt-5">
             <p className="text-white text-xl font-thin leading-8">
-              Browse our hand-picked selection, grab a coffee, and lose yourself
+              Browse our hand-picked selections, grab a coffee, and lose yourself
               in a good book. We&apos;re more than a bookstore—we&apos;re your
               reading community!
             </p>
